@@ -48,6 +48,32 @@ public static boolean isPalandrome(int n){
 		}
 
 	return n;
-}
+	}
+	
+	//This method finds the sum of squares from one to a given number n.
+	
+	public static BigInteger sumOfSquares(int n){
+		
+		BigInteger sum = BigInteger.ZERO;
+		
+		for(int i = 1; i <= n; i ++){
+			sum = sum.add(BigInteger.valueOf(i*i));
+		}
+		
+		return sum;
+	}
+	
+	//This method find the square of sums of numbers from one to a given number n.
+	
+	public static BigInteger squareOfSums(int n){
+		
+		BigInteger sum = BigInteger.ZERO;
+		
+		for(int i = 1; i <= n; i ++){
+			sum = sum.add(BigInteger.valueOf(i));
+		}
+		
+		return (sum.multiply(sum));
+	}
 
 }
